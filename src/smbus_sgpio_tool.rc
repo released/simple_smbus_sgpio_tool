@@ -4,8 +4,8 @@
 IDR_MAINFRAME ICON "res\\p_tool.ico"
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 1,0,0,19
- PRODUCTVERSION 1,0,0,19
+ FILEVERSION 1,0,0,20
+ PRODUCTVERSION 1,0,0,20
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
  FILEFLAGS VS_FF_DEBUG
@@ -22,11 +22,11 @@ BEGIN
         BEGIN
             VALUE "CompanyName", "SMBus/SGPIO HID Tool Team\0"
             VALUE "FileDescription", "SMBus/SGPIO HID Tool\0"
-            VALUE "FileVersion", "1.0.0.019\0"
+            VALUE "FileVersion", "1.0.0.020\0"
             VALUE "InternalName", "SmbusSgpioTool.exe\0"
             VALUE "OriginalFilename", "SmbusSgpioTool.exe\0"
             VALUE "ProductName", "SMBus/SGPIO HID Tool\0"
-            VALUE "ProductVersion", "1.0.0.019\0"
+            VALUE "ProductVersion", "1.0.0.020\0"
         END
     END
     BLOCK "VarFileInfo"

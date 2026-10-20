@@ -7,6 +7,15 @@ The bridge EVB acts as:
 - SMBus/I2C host bridge for target register validation.
 - SGPIO host bridge for SFF-8485 slot-frame generation.
 
+## Layout And Safe Clean
+
+Application source remains in `src`, automation in `scripts`, supporting guides
+in `docs`, and delivery/runtime files in `build`. Existing firmware/vendor
+trees retain their working paths. `scripts/clean_mfc.bat` removes allowlisted
+compiler files only, rejects reparse-point traversal before deletion, and
+retains EXE/INI/DLL/data/log/unknown files even inside nested output folders.
+A folder name such as `tests` or `obj` is not permission to erase its contents.
+
 ## Quick Start
 
 1. Build and flash the M032 or M261 bridge firmware:
