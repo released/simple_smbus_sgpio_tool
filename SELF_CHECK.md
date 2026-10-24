@@ -1,5 +1,36 @@
 # SELF_CHECK.md
 
+## Verified x64 EXE slimming 2026-10-25
+
+- PASS fresh comparable Release baseline 2956800 bytes (original delivery
+  2956288), formal 867328. Required delivery 2960073 -> 870601 bytes:
+  GUI plus unchanged 3273-byte Target_Default.ini preset.
+- Baseline SHA: 70304A688D65938E9BB4D23770D6F87D30ACC8275A5C92F9ED30477472433BB4.
+- Formal SHA: FBD9E9359664B232F250463D2ED245CB5D88467B232C6AF91B6ADE3BF97B54D0.
+- PASS canonical build_mfc.ps1 -Configuration Release -Platform x64
+  -CloseRunningTool $false; isolated MSBuild Debug with version prebuild disabled.
+  Zero reported compiler/linker warnings/errors; SDK informational defaults retained.
+- PASS authorized isolated actual-EXE tests: hash-matched fresh fixtures, identical
+  child-control class counts, owned common-dialog open/cancel, assertion-free Debug
+  startup/close and formal exit 0. No hardware, flash or clipboard actions.
+- Impact: unused x64 MFC registration only; /O2/static runtime/security PE 0x8160,
+  Win32 definitions, protocol/algorithm/firmware sources retained. Measure startup/control/UI paths, not bus throughput.
+- PASS paired gate: baseline warmups/calibration, five alternating AB/BA pairs,
+  no concurrent compilation. Before-candidate delta max(floor, 10% baseline median,
+  3*MAD); memory 5%; floors startup 25ms/UI 2ms/CPU 16ms/memory 1MiB.
+  All medians remain within baseline-derived observed variability:
+  - StartupMs: 603.1283 -> 547.1072, limit 658.1283.
+  - PeakBytes: 28561408.0000 -> 28086272.0000, limit 29988250.0000.
+  - CpuMs: 500.0000 -> 484.3750, limit 547.0000.
+  - WorkflowMs: 12.6019 -> 13.3588, limit 21.6019.
+- Raw samples/limits: docs/verification/exe-slimming-20261025.json.
+- PASS actual clean_mfc.bat: 32 compiler files removed, 3 protected actual
+  files SHA unchanged; 17 nested fixture files/source, help/idempotence PASS.
+  Unchanged earlier junction-rejection evidence is reused, not rerun. Personal
+  root INI hashes match the pre-build manifest without inspecting private values.
+- NOT RUN: physical devices/protocol, unrelated firmware, visual/DPI, clean-PC,
+  Win32 builds. No new driver/runtime, feature removal or global /O1 preset.
+
 ## Layout / Clean Audit 2026-10-20
 
 - Existing source layout already conforms; no application/protocol/firmware restructuring or dependencies were introduced.

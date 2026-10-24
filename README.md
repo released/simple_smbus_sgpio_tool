@@ -7,6 +7,13 @@ The bridge EVB acts as:
 - SMBus/I2C host bridge for target register validation.
 - SGPIO host bridge for SFF-8485 slot-frame generation.
 
+## Release size
+
+Release x64 EXE: 867328 bytes (comparable baseline 2956800).
+Features, static runtime, required files and Win32 settings are retained.
+See SELF_CHECK.md and the sanitized [verification record](docs/verification/exe-slimming-20261025.json)
+for actual scope, measurements and limitations.
+
 ## Layout And Safe Clean
 
 Application source remains in `src`, automation in `scripts`, supporting guides

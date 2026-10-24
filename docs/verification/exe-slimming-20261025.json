@@ -1,0 +1,179 @@
+{
+  "Date": "2026-10-25",
+  "Target": "Release|x64",
+  "Toolchain": "MSVC 14.44.35207",
+  "Candidate": [
+    {
+      "StartupMs": 534.6435,
+      "WorkflowMs": 13.4616,
+      "CpuMs": 468.75,
+      "PeakBytes": 28110848
+    },
+    {
+      "StartupMs": 539.6804000000001,
+      "WorkflowMs": 13.3588,
+      "CpuMs": 500,
+      "PeakBytes": 28098560
+    },
+    {
+      "StartupMs": 547.1072,
+      "WorkflowMs": 17.3874,
+      "CpuMs": 484.375,
+      "PeakBytes": 28037120
+    },
+    {
+      "StartupMs": 561.9551,
+      "WorkflowMs": 1.663,
+      "CpuMs": 406.25,
+      "PeakBytes": 28073984
+    },
+    {
+      "StartupMs": 621.2385,
+      "WorkflowMs": 2.064,
+      "CpuMs": 500,
+      "PeakBytes": 28086272
+    }
+  ],
+  "OriginalExeBytes": 2956288,
+  "BaselineBytes": 2956800,
+  "FormalBytes": 867328,
+  "BaselineSHA256": "70304A688D65938E9BB4D23770D6F87D30ACC8275A5C92F9ED30477472433BB4",
+  "FormalSHA256": "FBD9E9359664B232F250463D2ED245CB5D88467B232C6AF91B6ADE3BF97B54D0",
+  "RequiredFiles": [
+    "SmbusSgpioTool.exe",
+    "sequence_presets/Target_Default.ini (3273 bytes unchanged)"
+  ],
+  "DeliveryBeforeBytes": 2960073,
+  "DeliveryAfterBytes": 870601,
+  "Profile": "Startup",
+  "Samples": 5,
+  "Order": "baseline calibration before candidate; alternating AB/BA measured pairs",
+  "Limits": {
+    "StartupMs": {
+      "Median": 550.9837,
+      "MAD": 17.464200000000005,
+      "AllowedDelta": 55
+    },
+    "PeakBytes": {
+      "Median": 28536832,
+      "MAD": 4096,
+      "AllowedDelta": 1426842
+    },
+    "CpuMs": {
+      "Median": 453.125,
+      "MAD": 15.625,
+      "AllowedDelta": 47
+    },
+    "WorkflowMs": {
+      "Median": 12.928600000000001,
+      "MAD": 2.8798000000000012,
+      "AllowedDelta": 9
+    }
+  },
+  "Checks": [
+    {
+      "Metric": "StartupMs",
+      "BaselineMedian": 603.1283000000001,
+      "CandidateMedian": 547.1072,
+      "Limit": 658.1283000000001,
+      "Pass": true
+    },
+    {
+      "Metric": "PeakBytes",
+      "BaselineMedian": 28561408,
+      "CandidateMedian": 28086272,
+      "Limit": 29988250,
+      "Pass": true
+    },
+    {
+      "Metric": "CpuMs",
+      "BaselineMedian": 500,
+      "CandidateMedian": 484.375,
+      "Limit": 547,
+      "Pass": true
+    },
+    {
+      "Metric": "WorkflowMs",
+      "BaselineMedian": 12.6019,
+      "CandidateMedian": 13.3588,
+      "Limit": 21.6019,
+      "Pass": true
+    }
+  ],
+  "ControlShapePass": true,
+  "Calibration": [
+    {
+      "StartupMs": 568.4479,
+      "WorkflowMs": 10.0488,
+      "CpuMs": 453.125,
+      "PeakBytes": 28540928
+    },
+    {
+      "StartupMs": 553.0177,
+      "WorkflowMs": 13.3039,
+      "CpuMs": 453.125,
+      "PeakBytes": 28557312
+    },
+    {
+      "StartupMs": 550.9837,
+      "WorkflowMs": 0.8154,
+      "CpuMs": 484.375,
+      "PeakBytes": 28536832
+    },
+    {
+      "StartupMs": 517.4449000000001,
+      "WorkflowMs": 16.494600000000002,
+      "CpuMs": 328.125,
+      "PeakBytes": 28524544
+    },
+    {
+      "StartupMs": 507.8815,
+      "WorkflowMs": 12.928600000000001,
+      "CpuMs": 437.5,
+      "PeakBytes": 28536832
+    }
+  ],
+  "Baseline": [
+    {
+      "StartupMs": 545.4744000000001,
+      "WorkflowMs": 15.907200000000001,
+      "CpuMs": 453.125,
+      "PeakBytes": 28528640
+    },
+    {
+      "StartupMs": 621.7968000000001,
+      "WorkflowMs": 16.152,
+      "CpuMs": 500,
+      "PeakBytes": 28561408
+    },
+    {
+      "StartupMs": 530.9647,
+      "WorkflowMs": 11.197600000000001,
+      "CpuMs": 531.25,
+      "PeakBytes": 28565504
+    },
+    {
+      "StartupMs": 608.927,
+      "WorkflowMs": 12.6019,
+      "CpuMs": 515.625,
+      "PeakBytes": 28565504
+    },
+    {
+      "StartupMs": 603.1283000000001,
+      "WorkflowMs": 10.8968,
+      "CpuMs": 437.5,
+      "PeakBytes": 28508160
+    }
+  ],
+  "Clean": {
+    "Protected": 3,
+    "RemovedCompilerFiles": 32
+  },
+  "NotRun": [
+    "Physical devices/firmware",
+    "Visual/DPI",
+    "Clean-PC",
+    "Win32 builds"
+  ],
+  "AdditionalFix": null
+}

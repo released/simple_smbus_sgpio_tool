@@ -1,5 +1,17 @@
 # HANDOFF.md
 
+## Verified x64 EXE slimming 2026-10-25
+
+- Canonical Release and isolated Debug builds, owned control/dialog/normal-close
+  checks and five alternating performance pairs PASS; no real INI/device/clipboard.
+- EXE 2956800 -> 867328 bytes; required files 2960073 -> 870601 bytes.
+- SHA-256: FBD9E9359664B232F250463D2ED245CB5D88467B232C6AF91B6ADE3BF97B54D0.
+- Actual clean removed 32 compiler files; all 3 protected actual
+  files unchanged by SHA. Nested fixtures/help/idempotence PASS.
+- Raw sanitized samples/limits: docs/verification/exe-slimming-20261025.json.
+  Physical devices, firmware, visual/DPI/clean-PC/Win32 acceptance NOT RUN.
+- Ordinary publication commit/remote SHA: shared EXE_SLIMMING_PROGRESS.md.
+
 ## Layout / Clean Audit 2026-10-20
 
 - Existing source layout already conforms; no application/protocol/firmware restructuring or dependencies were introduced.

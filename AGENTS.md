@@ -1,5 +1,12 @@
 # AGENTS.md
 
+## Verified x64 EXE slimming 2026-10-25
+
+- x64 only: exclude unused MFC dialog-control registration; preserve /O2,
+  static CRT/MFC, security, Win32 definitions and required runtime files.
+- Re-evaluate before adding CMFC/extended dialog controls. SELF_CHECK and
+  docs/verification/exe-slimming-20261025.json record scoped evidence/limits.
+
 ## Layout And Clean Contract
 
 - Existing src/scripts/docs/build layout is already conforming; do not move working application/firmware modules for cosmetics.
