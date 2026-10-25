@@ -7,21 +7,6 @@ The bridge EVB acts as:
 - SMBus/I2C host bridge for target register validation.
 - SGPIO host bridge for SFF-8485 slot-frame generation.
 
-## Release size
-
-Release x64 EXE: 867328 bytes (comparable baseline 2956800).
-Features, static runtime, required files and Win32 settings are retained.
-See SELF_CHECK.md and the sanitized [verification record](docs/verification/exe-slimming-20261025.json)
-for actual scope, measurements and limitations.
-
-## Layout And Safe Clean
-
-Application source remains in `src`, automation in `scripts`, supporting guides
-in `docs`, and delivery/runtime files in `build`. Existing firmware/vendor
-trees retain their working paths. `scripts/clean_mfc.bat` removes allowlisted
-compiler files only, rejects reparse-point traversal before deletion, and
-retains EXE/INI/DLL/data/log/unknown files even inside nested output folders.
-A folder name such as `tests` or `obj` is not permission to erase its contents.
 
 ## Quick Start
 
@@ -153,10 +138,7 @@ M261 support is source-level aligned with the M032 combined bridge behavior. It 
 - `scripts\` - PC build/clean helpers.
 - `build\` - generated PC output.
 
-## Verification
+## Hardware Compatibility
 
-Current local verification:
-
-- PC build: PASS, `0 Error(s), 0 Warning(s)`.
-- M032 Keil firmware build: PASS, `0 Error(s), 0 Warning(s)`.
-- Hardware target validation: not run in this workspace session.
+Validate the selected bridge/target hardware combination before relying on its
+results. Software builds and protocol checks are not hardware acceptance.
