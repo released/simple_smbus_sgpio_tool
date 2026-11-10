@@ -1,0 +1,15 @@
+{
+  "publication_enabled": true,
+  "repository": "released/simple_smbus_sgpio_tool",
+  "visibility": "PUBLIC",
+  "branch": "main",
+  "readme_title": "SMBus/SGPIO HID Tool",
+  "identity_files": [
+    "README.md",
+    "SmbusSgpioTool.vcxproj"
+  ],
+  "delivery_files": [
+    "build/SmbusSgpioTool.exe",
+    "build/sequence_presets/Target_Default.ini"
+  ]
+}
